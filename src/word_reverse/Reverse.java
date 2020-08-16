@@ -1,10 +1,19 @@
 package word_reverse;
 
+import java.util.Scanner;
+
 public class Reverse {
 
 	public static void main(String[] args) {
-		String word = "abc";
+		Scanner scr = new Scanner(System.in);
+		System.out.println("Insert the word(min 4 chars) : ");
+		String word = scr.nextLine().toString().toLowerCase();
 		String mainword = word;
+		if(word.length() < 4)
+		{
+			System.err.println("Your string is too short. Exit...");
+			System.exit(0);
+		}
 		String hword = null;
 		String found = null;
 		int max = 0;
